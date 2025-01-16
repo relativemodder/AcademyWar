@@ -1,0 +1,44 @@
+﻿<Page x:Class="AcademyWar.PageMain.PageCreateAcc"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AcademyWar.PageMain"
+      mc:Ignorable="d" 
+      Height="350" Width="800"
+      Title="PageCreateAcc" Background="White">
+
+    <Grid>
+        <Grid Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Введите имя:" />
+                    <TextBlock Text="Введите логин:" />
+                    <TextBlock Text="Введите пароль:" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBox Name="UserName" />
+                    <TextBox Name="Login" />
+                    <PasswordBox Name="Password" PasswordChanged="PB_PasswordChanged" />
+                    <PasswordBox Name="Password2" PasswordChanged="PB_PasswordChanged" />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button IsEnabled="False" Name="CreateAccButton" Background="#FFB6FFA2" Content="Создать" Margin="5" Click="CreateAccButton_Click" />
+                <Button Grid.Column="1" Name="BackButton" Background="#FF589FFF" Content="Назад" Margin="5" Foreground="White" Click="BackButton_Click" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
